@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  color: white;
+}
+
+body {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10rem;
+}
+.icon {
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  display: block;
+}
+
+.sedan-icon {
+  background-image: url(../images/icon-sedans.svg);
+}
+.luxury-icon {
+  background-image: url(../images/icon-luxury.svg);
+}
+.suv-icon {
+  background-image: url(../images/icon-suvs.svg);
+}
+
+.grid-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+@media only screen and (max-width: 1200px) {
+    body{
+        height: auto;
+        padding: 4rem 2rem;
+    }
+
+  .grid {
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+  }
+}
+
+.card {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.grid .card:nth-child(1) {
+  background-color: var(--Bright-orange);
+}
+.grid .card:nth-child(2) {
+  background-color: var(--Dark-cyan);
+}
+.grid .card:nth-child(3) {
+  background-color: var(--Very-dark-cyan);
+}
+.card h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding-bottom: 1.5rem;
+}
+.card p {
+  line-height: 1.75rem;
+  color: var(--Transparent-white);
+  padding-bottom: 5rem;
+}
+
+.card button {
+  border: none;
+  border-radius: 2rem;
+  padding: 0.9rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.5s;
+}
+.card:nth-child(1) button {
+  color: var(--Bright-orange);
+}
+.card:nth-child(2) button {
+  color: var(--Dark-cyan);
+}
+.card:nth-child(3) button {
+  color: var(--Very-dark-cyan);
+}
+
+.card button:hover {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
